@@ -1,16 +1,3 @@
-"""
-Group 8
-CSC 256
-Prof. Tonya Melvin-Bryant
-Lab Intro: Full Retirement Age
-
-Using the Full Retirement Age information at Social Security Administration, this program:
-asks the user for a birth year and month,
-displays the age (with additional months) for obtaining full SSA benefits
-displays the year and month for obtaining full SSA benefits
-"""
-
-
 import sys
 from retirement import *
 

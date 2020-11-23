@@ -1,11 +1,10 @@
 Feature: Full Retirement Age calculator
-  I want to calculate the year and month a person will start receiving
-  full SSA benefits based on the person's birth year and month.
+  Calculate the Retirement age from the given birth year and month
 
 
   Scenario Outline: Calculate the retirement year and month
-    Given the user wants to know date to start receiving full SSA benefits
-    When "<initial_year>" year is entered
+    Given the user wants to calculate the retirement date
+    When  "<initial_year>" year is entered to calculate
     Then the program will use "<initial_year>" so retirement age will be in "<age_years>" years and "<age_months>" months
 
     Examples: Amounts
@@ -31,7 +30,7 @@ Feature: Full Retirement Age calculator
 
 
   Scenario Outline: Calculate the retirement year and month
-    Given the user enters invalid info
+    Given the user enters invalid information
     When "<initial_year>" year is invalid
     Then the program will return an invalid message for the "<initial_year>"
 

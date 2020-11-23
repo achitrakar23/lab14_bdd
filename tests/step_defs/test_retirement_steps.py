@@ -22,14 +22,14 @@ CONVERTERS = {
 scenarios('../features/retirement.feature', example_converters=CONVERTERS)
 
 
-@given(parsers.cfparse('the user wants to know date to start receiving full SSA benefits', extra_types=EXTRA_TYPES))
-@given('the user wants to know date to start receiving full SSA benefits')
+@given(parsers.cfparse('the user wants to calculate the retirement date', extra_types=EXTRA_TYPES))
+@given('the user wants to calculate the retirement date')
 def test_user_inputs():
     pass
 
 
-@when(parsers.cfparse('"{initial_year:Number}" year is entered', extra_types=EXTRA_TYPES))
-@when('"<initial_year>" year is entered')
+@when(parsers.cfparse('"{initial_year:Number}" year is entered to calculate', extra_types=EXTRA_TYPES))
+@when('"<initial_year>" year is entered to calculate')
 def calculate_retirement(initial_year):
     pass
 
@@ -42,7 +42,7 @@ def calculate_full_date(initial_year, age_years, age_months):
     assert calc_age[1].__eq__(age_months)
 
 
-@given("the user enters invalid info")
+@given("the user enters invalid information")
 def step_impl():
     pass
 
